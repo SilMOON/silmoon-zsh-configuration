@@ -1,0 +1,20 @@
+# Initialize antigen
+source $(brew --prefix)/share/antigen/antigen.zsh
+
+# Load the oh-my-zsh's library
+antigen use oh-my-zsh
+
+# Add packages
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle git
+
+# Set theme
+antigen theme robbyrussell
+
+antigen apply
+
+# zsh-history-substring-search configuration
+bindkey '^[[A' history-substring-search-up # or '\eOA'
+bindkey '^[[B' history-substring-search-down # or '\eOB'
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
+
